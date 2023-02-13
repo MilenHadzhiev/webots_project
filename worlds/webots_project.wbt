@@ -3,42 +3,39 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/universal_robots/protos/UR5e.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2852358368308388 0.5658236003936602 0.7736175868120931 1.1550411758815726
-  position -1.209911163605606 -1.4493311737623302 1.7050342987705283
+  orientation -0.15208765391075507 -0.08529661712841047 0.984679558351026 4.1507435194192395
+  position 1.5251348291016638 2.6309740789315432 1.0678521396949667
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorSize 2 2
   floorTileSize 0.25 0.25
   wallHeight 0.05
 }
-WoodenBox {
-  translation 0.445968 -0.447526 0.05
-  size 0.1 0.1 0.1
-  mass 0.2
-}
-WoodenBox {
-  translation -0.260588 0.12153 0.05
-  rotation 0 1 0 0
-  name "wooden box(1)"
-  size 0.1 0.1 0.1
-  mass 3
-}
-WoodenBox {
-  translation 0.107927 0.264114 0.05
-  name "wooden box(2)"
-  size 0.1 0.1 0.1
-  mass 0.2
-}
-E-puck {
-  camera_antiAliasing TRUE
-  kinematic TRUE
+UR5e {
+  hidden translation_1 0 0 0.163
+  hidden rotation_1 0 0 -1 9.556392919974238e-05
+  hidden translation_2 0 0.138 0
+  hidden rotation_2 0 1 0 1.5708531765020433
+  hidden translation_3 0 -0.131 0.425
+  hidden rotation_3 0 1 0 1.5858364339975547e-05
+  hidden translation_4 0 0 0.392
+  hidden rotation_4 0 1 0 1.5707894590544558
+  hidden translation_5 0 0.127 0
+  hidden rotation_5 0 0 1 4.1187628987685676e-07
+  hidden translation_6 0 0 0.1
+  hidden rotation_6 0 -1 0 4.1187628987685676e-07
+  controller "ure_can_grasper"
+  controllerArgs [
+    ""
+  ]
+  window "generic_window"
 }
